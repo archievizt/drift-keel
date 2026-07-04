@@ -26,7 +26,12 @@ def _fixes_for(device: Device, ruleset: RuleSet) -> list[str]:
         if not rule.applies_to(device.platform):
             continue
         if rule.remediation and is_violated(config, rule):
-            log.warning("%s violates %s, queuing %d fix line(s)", device.name, rule.id, len(rule.remediation))
+            log.warning(
+                "%s violates %s, queuing %d fix line(s)",
+                device.name,
+                rule.id,
+                len(rule.remediation),
+            )
             lines.extend(rule.remediation)
     return lines
 

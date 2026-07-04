@@ -47,7 +47,13 @@ def audit_device(device: Device, ruleset: RuleSet) -> list[Finding]:
         violated = is_violated(config, rule)
         findings.append(Finding(device.name, rule.id, rule.title, rule.severity, violated))
         if violated:
-            log.warning("[%s] %s on %s: %s", rule.severity.upper(), rule.id, device.name, rule.title)
+            log.warning(
+                "[%s] %s on %s: %s",
+                rule.severity.upper(),
+                rule.id,
+                device.name,
+                rule.title,
+            )
     return findings
 
 

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import logging
 from contextlib import contextmanager
-from typing import Iterator
+from collections.abc import Iterator
 
 from netmiko import BaseConnection, ConnectHandler
 
