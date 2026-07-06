@@ -144,7 +144,7 @@ netops ipam sync --apply             # write to NetBox
 
 ## License
 
-MIT. See LICENSE.
+MIT. See [LICENSE](https://github.com/archievizt/netops-automation/blob/main/LICENSE).
 
 ---
 
