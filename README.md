@@ -86,5 +86,4 @@ MIT. See [LICENSE](LICENSE).
 
 ---
 
-Built by Archie Abeleda · CISSP · CCSP · Cisco Certified Specialist (Security)
-[archievizt.github.io](https://archievizt.github.io) · [GitHub](https://github.com/archievizt) · [LinkedIn](https://linkedin.com/in/ajrabeleda)
+Built by Archie Abeleda
