@@ -2,8 +2,6 @@
 
 Network automation for multi-vendor labs and internal networks. Four tools on one inventory and a single Netmiko connection layer: config backup with drift detection, pre and post change validation, STIG-style compliance auditing, and IPAM sync against NetBox.
 
-Live writeup → https://archievizt.github.io/netops-automation/
-
 ## Why it exists
 
 Four things go wrong on a network when no one is watching. Config drifts off the standard. A change drops an adjacency and nobody notices until traffic does. A device quietly falls out of compliance. The documentation stops matching reality. Each tool here closes one of those gaps, runs unattended, and never trusts me to remember.
