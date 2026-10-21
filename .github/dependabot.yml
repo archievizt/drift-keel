@@ -1,0 +1,18 @@
+# Weekly checks for outdated or vulnerable dependencies. New releases wait
+# 7 days before Dependabot proposes them, so a bad release has time to be pulled.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5

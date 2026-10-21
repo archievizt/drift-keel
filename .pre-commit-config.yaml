@@ -1,13 +1,16 @@
+# Hook versions are frozen to commit SHAs; the tag each one came from is in the comment.
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.10
+    rev: a5c7353d59e789e64c909be32372b6f957e1223d  # frozen: v0.4.10
     hooks:
       - id: ruff
         args: [--fix]
       - id: ruff-format
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: 2c9f875913ee60ca25ce70243dc24d5b6415598c  # frozen: v4.6.0
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: check-yaml
+      - id: check-added-large-files
+      - id: detect-private-key

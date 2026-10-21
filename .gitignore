@@ -1,12 +1,35 @@
+# Python build and tool output
 __pycache__/
 *.py[cod]
 .venv/
 venv/
-.env
-data/
 *.egg-info/
 .pytest_cache/
 .ruff_cache/
 dist/
 build/
+
+# Secrets and local settings: real values live in .env, never in git
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ecdsa*
+id_ed25519*
+.netrc
+
+# Real inventory and captured configs belong in a separate private repo
 inventory/devices.yaml
+data/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.log
