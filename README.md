@@ -84,6 +84,4 @@ Full setup, from enabling SSH on the lab devices to scheduling backups, is in th
 
 MIT. See [LICENSE](LICENSE).
 
----
 
-Built by Archie Abeleda
