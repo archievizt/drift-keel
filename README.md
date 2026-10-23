@@ -72,6 +72,8 @@ drift-keel ipam sync [--apply]               # preview, or write to NetBox
 
 [![audit output](docs/img/audit.png)](docs/img/audit.png)
 
+*Captured before the rename to Drift-Keel, so the log shows the old `netops` module name.*
+
 ## Safety
 
 The tools that change a device or a record are read-only until you opt in. `compliance remediate` and `ipam sync` are dry runs by default and print what they would do. Add `--apply` to act. Run remediation against a lab first, and read the diff before production.
