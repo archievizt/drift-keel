@@ -1,5 +1,5 @@
-from netops.backup.collector import normalize
-from netops.backup.differ import diff_configs
+from drift_keel.backup.collector import normalize
+from drift_keel.backup.differ import diff_configs
 
 
 def test_normalize_strips_volatile_lines():

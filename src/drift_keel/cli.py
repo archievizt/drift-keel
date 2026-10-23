@@ -1,12 +1,12 @@
 """Command line interface.
 
-    netops backup run [--push/--no-push]
-    netops backup schedule --at 02:00
-    netops prepost snapshot pre
-    netops prepost compare pre post
-    netops compliance audit
-    netops compliance remediate [--apply]
-    netops ipam sync [--apply]
+    drift-keel backup run [--push/--no-push]
+    drift-keel backup schedule --at 02:00
+    drift-keel prepost snapshot pre
+    drift-keel prepost compare pre post
+    drift-keel compliance audit
+    drift-keel compliance remediate [--apply]
+    drift-keel ipam sync [--apply]
 """
 
 from __future__ import annotations
@@ -20,7 +20,7 @@ from .ipam import ipam as ipam_mod
 from .logging_config import configure_logging
 from .prepost import prepost as prepost_mod
 
-DEFAULT_RULES = "src/netops/compliance/stig_examples.yaml"
+DEFAULT_RULES = "src/drift_keel/compliance/stig_examples.yaml"
 
 app = typer.Typer(
     help="Network automation: backup, validation, compliance, IPAM sync.",

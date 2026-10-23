@@ -1,7 +1,7 @@
 """Runtime settings loaded from environment variables and an optional .env file.
 
 Credentials never live in the inventory or in the repository. They are read from
-the environment with the NETOPS_ prefix, for example NETOPS_PASSWORD.
+the environment with the DRIFT_KEEL_ prefix, for example DRIFT_KEEL_PASSWORD.
 """
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_prefix="NETOPS_", extra="ignore")
+    model_config = SettingsConfigDict(env_file=".env", env_prefix="DRIFT_KEEL_", extra="ignore")
 
     # Device access
     username: str = ""
@@ -32,8 +32,8 @@ class Settings(BaseSettings):
     # Config backup git target (a dedicated repo, separate from this toolkit)
     git_remote: str = ""
     git_branch: str = "main"
-    git_author_name: str = "netops-automation"
-    git_author_email: str = "netops-automation@localhost"
+    git_author_name: str = "drift-keel"
+    git_author_email: str = "drift-keel@localhost"
 
     # NetBox source of truth
     netbox_url: str = ""

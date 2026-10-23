@@ -1,6 +1,6 @@
-# netops-automation
+# Drift-Keel
 
-Network automation for multi-vendor labs and internal networks. Four tools on one inventory and a single Netmiko connection layer: config backup with drift detection, pre and post change validation, STIG-style compliance auditing, and IPAM sync against NetBox.
+Drift-Keel keeps network config on course. Network automation for multi-vendor labs and internal networks. Four tools on one inventory and a single Netmiko connection layer: config backup with drift detection, pre and post change validation, STIG-style compliance auditing, and IPAM sync against NetBox.
 
 ## Why it exists
 
@@ -29,7 +29,7 @@ A src-layout Python package with a Typer CLI, one command group per tool, every 
 ## Architecture
 
 ```
-src/netops/
+src/drift_keel/
   settings.py          config from environment, credentials never in the repo
   inventory.py         one YAML file, validated on load
   connections.py       single Netmiko context manager used by every tool
@@ -43,29 +43,29 @@ src/netops/
 ## Quickstart
 
 ```
-git clone https://github.com/archievizt/netops-automation
-cd netops-automation
+git clone https://github.com/archievizt/drift-keel
+cd drift-keel
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 
 cp .env.example .env                                       # set credentials
 cp inventory/devices.example.yaml inventory/devices.yaml   # list devices
 
-netops backup run --no-push     # safe local run, reads devices, changes nothing
-netops compliance audit         # report violations, changes nothing
+drift-keel backup run --no-push     # safe local run, reads devices, changes nothing
+drift-keel compliance audit         # report violations, changes nothing
 ```
 
 ## Commands
 
 ```
-netops backup run [--push/--no-push]     # capture configs, detect drift
-netops backup schedule --at 02:00        # run it daily
-netops prepost snapshot pre              # capture state before a change
-netops prepost snapshot post             # capture state after
-netops prepost compare pre post          # report what broke
-netops compliance audit                  # report violations, read-only
-netops compliance remediate [--apply]    # dry run, or push the fixes
-netops ipam sync [--apply]               # preview, or write to NetBox
+drift-keel backup run [--push/--no-push]     # capture configs, detect drift
+drift-keel backup schedule --at 02:00        # run it daily
+drift-keel prepost snapshot pre              # capture state before a change
+drift-keel prepost snapshot post             # capture state after
+drift-keel prepost compare pre post          # report what broke
+drift-keel compliance audit                  # report violations, read-only
+drift-keel compliance remediate [--apply]    # dry run, or push the fixes
+drift-keel ipam sync [--apply]               # preview, or write to NetBox
 ```
 
 ## Example: drift detection
@@ -78,7 +78,7 @@ The tools that change a device or a record are read-only until you opt in. `comp
 
 ## Setup
 
-Full setup, from enabling SSH on the lab devices to scheduling backups, is in the [writeup](https://archievizt.github.io/netops-automation/).
+Full setup, from enabling SSH on the lab devices to scheduling backups, is in the [writeup](https://archievizt.github.io/drift-keel/).
 
 ## License
 

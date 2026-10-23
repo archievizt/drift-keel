@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "netops-automation"
+name = "drift-keel"
 version = "0.1.0"
-description = "Network automation toolkit: config backup and drift detection, pre/post change validation, STIG compliance auditing, and IPAM source-of-truth sync."
+description = "Drift-Keel, a network automation toolkit: config backup and drift detection, pre/post change validation, STIG compliance auditing, and IPAM source-of-truth sync."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -28,11 +28,11 @@ dependencies = [
 dev = ["pytest>=8.0", "ruff>=0.4"]
 
 [project.scripts]
-netops = "netops.cli:main"
+drift-keel = "drift_keel.cli:main"
 
 [project.urls]
 Homepage = "https://archievizt.github.io"
-Repository = "https://github.com/archievizt/netops-automation"
+Repository = "https://github.com/archievizt/drift-keel"
 
 [tool.setuptools.packages.find]
 where = ["src"]

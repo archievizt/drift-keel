@@ -58,7 +58,7 @@ def sync(apply: bool = False) -> None:
         return
 
     if not settings.netbox_url or not settings.netbox_token:
-        log.error("set NETOPS_NETBOX_URL and NETOPS_NETBOX_TOKEN to sync")
+        log.error("set DRIFT_KEEL_NETBOX_URL and DRIFT_KEEL_NETBOX_TOKEN to sync")
         return
 
     import pynetbox
